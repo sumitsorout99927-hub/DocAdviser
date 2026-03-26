@@ -2,10 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google import genai
 from google.genai import types
+import os
 
 app = Flask(__name__)
 # CORS allows your HTML file to communicate with this Python server
 CORS(app) 
+
+# The server will now securely grab the key from Render's hidden settings!
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # Initialize the new Gemini Client
 client = genai.Client(api_key="AIzaSyAy6i1mEvCkOEL4853ktI20KC3nt_39s3U")
