@@ -45,5 +45,4 @@ def chat():
         return jsonify({"reply": "Sorry, I am having trouble connecting to my document database right now. Please try again later."}), 500
 
 if __name__ == '__main__':
-    # Run the server on port 5000
-    app.run(debug=True, port=5000)
+        app.run(host='0.0.0.0', port=10000)
