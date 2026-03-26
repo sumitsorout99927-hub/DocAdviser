@@ -11,9 +11,6 @@ CORS(app)
 # The server will now securely grab the key from Render's hidden settings!
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-# Initialize the new Gemini Client
-client = genai.Client(api_key="AIzaSyAy6i1mEvCkOEL4853ktI20KC3nt_39s3U")
-
 # Set up the persona for DocAdviser
 system_instruction = """
 You are DocAdviser, a helpful and expert AI assistant for Indian citizens. 
